@@ -4,6 +4,10 @@ import helpers.InputReader;
 public class Week1 
 {
     public static final String CONSOLE_CLEAR = "\033[H\033[2J";
+    /**
+     * @param args
+     */
+    private static final String Int = null;
     public static void main(String[] args)
     {
         System.out.println(CONSOLE_CLEAR);
@@ -17,7 +21,40 @@ public class Week1
         System.out.println(" by Nicholas Day and Derek Peacock");
         System.out.println();
 
-        String name = InputReader.getString("Enter your name > ");
-        System.out.println("Hello " + name);
+        System.out.println( "hello world");
+
+        /* 
+        String name = InputReader.getString( "Whats yo name : " );
+        System.out.println( "Hi " + name); 
+
+        String Id = InputReader.getString( "Enter your id : ");
+        System.out.println( " Your id is " +Id + " right? Thanks" );
+
+        System.out.println("Lets do some math now");
+        
+    */
+        int length = InputReader.getInt("Enter length for your rectangle > " );
+
+        int height = InputReader.getInt("Enter height for your rectangle > " );
+
+        int area = length*height ;
+        int perimeter = (length+height)*2 ;
+
+        System.out.println(" So your Area for rectangle is " +area + " and perimeter is " + perimeter);
+        
+        double number1 = InputReader.getInt(" enter the first number > ");
+        double number2 = InputReader.getInt(" enter the second number > ");
+        
+        double average = ( number1 + number2 )/2 ;
+        
+        System.out.println( " THE average is " + average );
+    
+        int value1 = InputReader.getInt("enter first value"); 
+        int value2 = InputReader.getInt("enter second value");
+        System.out.println(value1 + value2 );
+        System.out.println(value2 + value1);
+   
+
+
     } 
 }

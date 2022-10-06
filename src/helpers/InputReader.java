@@ -52,6 +52,7 @@ public class InputReader
      * and return it as an interger.
      * 
      * Solution template provided by Charatan and Kans - modified by N Day September 2022
+     * @param string
      * 
      * @return Integer typed by user.
      */
@@ -120,5 +121,6 @@ public class InputReader
         }
         return number;
     }
+
 
 }
