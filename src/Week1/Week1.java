@@ -8,6 +8,9 @@ public class Week1
      * @param args
      */
     private static final String Int = null;
+    /**
+     * @param args
+     */
     public static void main(String[] args)
     {
         System.out.println(CONSOLE_CLEAR);
@@ -23,7 +26,6 @@ public class Week1
 
         System.out.println( "hello world");
 
-        /* 
         String name = InputReader.getString( "Whats yo name : " );
         System.out.println( "Hi " + name); 
 
@@ -31,8 +33,7 @@ public class Week1
         System.out.println( " Your id is " +Id + " right? Thanks" );
 
         System.out.println("Lets do some math now");
-        
-    */
+    
         int length = InputReader.getInt("Enter length for your rectangle > " );
 
         int height = InputReader.getInt("Enter height for your rectangle > " );
@@ -55,6 +56,18 @@ public class Week1
         System.out.println(value2 + value1);
    
         int mark;
+
+        int Year = InputReader.getInt(" What year were you born ? ");
+        int Month = InputReader.getInt(" What month were you born ? ");
+        int Day = InputReader.getInt(" What day of the month were you born ? ");
+        System.out.println("You have been alive for " + ((2022-Year)*365 + Month*30 + Day) + " Days " );
+
+        double Feet = InputReader.getInt("Enter the feet : ");
+        double Mile = ( Feet/5280);
+        System.out.println("it is " +Mile + "in Mile");
+
+       
+        
 
 
     } 
