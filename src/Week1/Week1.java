@@ -55,7 +55,6 @@ public class Week1
         System.out.println(value1 + value2 );
         System.out.println(value2 + value1);
    
-        int mark;
 
         int Year = InputReader.getInt(" What year were you born ? ");
         int Month = InputReader.getInt(" What month were you born ? ");

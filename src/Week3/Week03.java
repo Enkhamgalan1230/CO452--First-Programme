@@ -1,5 +1,5 @@
 package Week3;
-
+import java.util.ArrayList;
 public class Week03 
 {
     public static final String CONSOLE_CLEAR = "\033[H\033[2J";
@@ -17,13 +17,22 @@ public class Week03
         System.out.println();
 
         Student entwan = new Student( 22135347, "entwan");
-        entwan.print();
+        //entwan.print();
 
         Student nick = new Student( 221353, "nick");
-        nick.print();
+       // nick.print();
 
         Student mustafa = new Student( 696969, "mustafa");
-        mustafa.print();
+        //mustafa.print();
+
+        ArrayList<Student> students = new ArrayList<Student>();
+        students.add(entwan);
+        students.add(nick);
+        students.add(mustafa);
+        for(Student student : students)
+        {
+            student.print();
+        }
     }     
     
 
