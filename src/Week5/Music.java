@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Music {
     private String  artistname;
     private String song ;
-    private Int playcount;
+    private int playcount;
 
     public Music(String artistname, String song, int playcount)
     {
@@ -15,9 +15,8 @@ public class Music {
 
     }
     public void print(){
-        System.out.println("ID: " +this.artistname);
-        System.out.println("Name: " +this.song);
-        System.out.println("Name: " +this.playcount);
+        System.out.println("Artist name: " +this.artistname + "\tSong name: " +this.song + "\tPlay count: " +this.playcount );
+        
 
     }
 }
