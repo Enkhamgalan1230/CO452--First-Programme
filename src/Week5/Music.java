@@ -19,4 +19,7 @@ public class Music {
         
 
     }
+    public ArrayList<Music> getname() {
+        return null;
+    }
 }
