@@ -1,5 +1,7 @@
 package Week5;
 import java.util.ArrayList;
+import java.util.Iterator;
+
 import helpers.InputReader;
 public class CW1 {
      public static final String CONSOLE_CLEAR = "\033[H\033[2J";
@@ -31,22 +33,19 @@ public class CW1 {
         for(Music music : musics)
         {
             music.print();
-            
         }
-        public Music findByFirstName(String artistname )
+        String remove = InputReader.getString("please insert the artist's first name if you want to remove a song : ");
+        remove.toLowerCase();
+        for (Music music : musics)
         {
-        for(Music music : musics)
-        {
-        if(music.getartistname() == artistname)
-        return music;
+            if(music.getmusic() == musics)
+            return musics;
         }
-        return null;
-        }
-        String removement = InputReader.getString(" Please write down the artist's first name if you want to delete the song : ");
-        removement.toLowerCase();
+        return null; 
 
-    musics.remove(removement);
-    System.out.println("Your song has been removed :) +  ");
+       }
+
+        
 
 
         
