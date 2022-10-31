@@ -6,6 +6,7 @@ public class Music {
     private String  artistname;
     private String song ;
     private int playcount;
+    
 
     public Music(String artistname, String song, int playcount)
     {
@@ -19,7 +20,10 @@ public class Music {
         
 
     }
-    public ArrayList<Music> getname() {
-        return null;
+    public String getname() {
+        return artistname; 
     }
+     public int getPlayCount() {
+        return playcount; 
+     }
 }
