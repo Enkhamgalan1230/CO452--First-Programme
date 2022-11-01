@@ -7,16 +7,16 @@ public class CW1 {
      public static final String CONSOLE_CLEAR = "\033[H\033[2J";
     public static void main(String[] args)
     {
-        Music ariana = new Music( "ariana grande", "Into you", 1);
-        Music xxxtentacion = new Music( "xxxtentacion", "SAD", 9);
-        Music biggie = new Music( "notorious big", "Juicy", 8);
-        Music kendrick = new Music( "kendrick lamar", "Money tree", 7);
-        Music pac = new Music( "2pac", "Hit 'Em Up", 6);
-        Music eminem = new Music( "eminem", "Mockingbird", 5);
-        Music drake = new Music( "drake", "God's Plan", 4);
-        Music travis = new Music( "travis scott", "SICKO MODE", 1);
-        Music joji = new Music( "joji", "YEAH RIGHT", 2);
-        Music lilpeep = new Music( "lil peep", "Star Shopping", 3);
+        Music ariana = new Music( "ariana grande", "Into you", 956156387);
+        Music xxxtentacion = new Music( "xxxtentacion", "SAD", 1186723041);
+        Music biggie = new Music( "notorious big", "Juicy", 486963991);
+        Music kendrick = new Music( "kendrick lamar", "Money tree", 104834424);
+        Music pac = new Music( "2pac", "Hit 'Em Up", 562839095);
+        Music eminem = new Music( "eminem", "Mockingbird", 648318604);
+        Music drake = new Music( "drake", "God's Plan", 1452875826);
+        Music travis = new Music( "travis scott", "SICKO MODE", 1049871890);
+        Music joji = new Music( "joji", "YEAH RIGHT", 143270169);
+        Music lilpeep = new Music( "lil peep", "Star Shopping", 77285420);
         
         ArrayList<Music> musics = new ArrayList<Music>();
         musics.add(ariana);
@@ -33,7 +33,16 @@ public class CW1 {
         //PrintList(musics);
         System.out.println(CONSOLE_CLEAR);
 
-        System.out.println("Songs listed by playcount : ");
+        String opening = InputReader.getString("Do you want to see listed songs? yes/no  ");
+        opening.toLowerCase();
+        if (opening.equals("y") || opening.equals("yes"))
+        {
+            for (Music music : musics)
+            { music.print();}
+        }
+        
+        System.out.println(" ");
+        System.out.println(" Here is songs listed by playcount : ");
         PrintListByCount(musics);
 
 
@@ -65,19 +74,19 @@ public class CW1 {
         int howLong = localMusics.size();
             for(int highest=0 ; highest< howLong; highest++ )
             {
-                Music temp = new Music("", "", 0);
+                Music temporary = new Music("", "", 0);
                 int highestNumber=0;
                 for (Music music : localMusics)
                 {
                     if( highestNumber < music.getPlayCount())
                     {
                         highestNumber = music.getPlayCount();
-                        temp = music;
+                        temporary = music;
 
                     }
                 }
-                temp.print();
-                localMusics.remove(temp);
+                temporary.print();
+                localMusics.remove(temporary);
             }
        }
 
