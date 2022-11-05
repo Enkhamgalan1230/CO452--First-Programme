@@ -40,27 +40,33 @@ public class CW1 {
             for (Music music : musics)
             { music.print();}
         }
-        
         System.out.println(" ");
-        System.out.println(" Here is songs listed by playcount : ");
-        PrintListByCount(musics);
+        String countlist = InputReader.getString("\tDo you want to see songs listed by its playcount? yes/no  ");
+        countlist.toLowerCase();
+        if (countlist.equals("y") || countlist.equals("yes"))
+        {
+            System.out.println("\t Here is songs listed by playcount : ");
+            PrintListByCount(musics);
+        }
+        
 
-
-        String remove = InputReader.getString("please insert the artist's first name if you want to remove a song : ");
+        String remove = InputReader.getString("\tplease insert the artist's name if you want to remove a song : ");
         remove.toLowerCase();
         for (Music music : musics)
         {
             
-            if(music.getname().toLowerCase() == remove)
+            if(music.getname().toLowerCase().contains(remove))
             {
                 System.out.println(remove +" " + music.getname()); 
                 musics.remove(music);
+                System.out.println("song has been found and removed. "); 
+                PrintList(musics);
                 
             }
             else 
             System.out.println("song hasn't found. "); 
         }
-        PrintList(musics);
+    
 
        } 
        public static void  PrintList(ArrayList<Music> musics){
