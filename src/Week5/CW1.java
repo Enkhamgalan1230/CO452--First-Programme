@@ -41,6 +41,29 @@ public class CW1 {
             { music.print();}
         }
         System.out.println(" ");
+
+        String adding = InputReader.getString("Do you want to add songs to the list? yes/no  ");
+        adding.toLowerCase();
+        if (adding.equals("y") || adding.equals("yes"))
+        {
+            String artistname = InputReader.getString("Please enter artist's name : ");
+            String song = InputReader.getString("Please enter song name : ");
+            int playcount = InputReader.getInt("Please enter song's playcount : ");
+
+            Music newsong = new Music(artistname, song, playcount); 
+            musics.add(newsong);
+           
+            for (Music music : musics)
+            { 
+                music.print();
+            }
+
+
+        }
+
+
+
+        System.out.println(" ");
         String countlist = InputReader.getString("\tDo you want to see songs listed by its playcount? yes/no  ");
         countlist.toLowerCase();
         if (countlist.equals("y") || countlist.equals("yes"))
@@ -49,6 +72,8 @@ public class CW1 {
             PrintListByCount(musics);
         }
         
+
+        System.out.println(" ");
 
         String remove = InputReader.getString("\tplease insert the artist's name if you want to remove a song : ");
         remove.toLowerCase();
