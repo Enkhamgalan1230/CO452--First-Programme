@@ -8,10 +8,15 @@ import java.util.List;
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Lobster extends Actor
+public class Lobster extends Animal
 {
     private int speed = 2;
     private Random generator = new Random();
+    
+    public Lobster()
+    {
+        turn(90 * generator.nextInt(10));
+    }
     
     /**
      * This method looks to see if the crab is within a certain
@@ -23,6 +28,18 @@ public class Lobster extends Actor
     {
         // Add your action code here.
         move(speed);
+        if ( atWorldEdge() )
+        {
+            turn(180);
+        }
+        if (eat(Lobster.class) == true)
+        {
+            Greenfoot.playSound("yame.wav");
+        }
+        //if ( atWorldEdge() )
+        //{
+            //setLocation( 30 , getY() );
+        //}
     }
     
 }
